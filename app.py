@@ -7,7 +7,7 @@ model = pk.load(open("Heart_diease_model.pkl", "rb"))
 
 data = pd.read_csv('heart_disease.csv')
 
-st.header('CardioCare')
+st.header('CardioCare ❤')
 
 gender = st.selectbox('Choose Gender', data['Gender'].unique())
 if gender == 'Male':
