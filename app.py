@@ -16,7 +16,11 @@ else:
     gen = 0
 
 age = st.number_input("Enter Your Age Here:")
-currentSmoker = st.number_input("Is patient currentSmoker")
+currentSmoker = st.selectbox("Is patient currentSmoker", data['currentSmoker'].unique())
+if currentSmoker == 'Yes':
+       currentSmoker = 1
+else:
+       currentSmoker = 0
 cigsPerDay = st.number_input("Enter the No. of Cigarretes per day")
 BPMeds = st.number_input("Is patient is on any BP Medicines")
 prevalentStroke = st.number_input("Is patient had stroke earlier")
